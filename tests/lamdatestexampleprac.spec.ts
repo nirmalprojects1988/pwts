@@ -10,7 +10,8 @@ test.skip('Get by role practice', async({page}) => {
 
    await page.getByRole('button',{name:'Shop by Category'}).click()
    await page.getByRole('heading', { name: 'Top categories close' }).getByLabel('close').click()
-   await page.getByRole('button',{name:' My account'}).hover({force:true})
+   await page.getByRole('button',{name:' My account'}).nth(1)
+   .hover({force:true})
    await page.getByRole('link',{name:'Login'}).click()
    await page.getByRole('link',{name:'Continue'}).click()
    await page.close()
