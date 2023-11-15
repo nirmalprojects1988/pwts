@@ -8,7 +8,19 @@ test.skip('Handel input field', async({page}) => {
     test.slow()
     firstname?.fill('nirmal')
 });
-test('Handel input field without option chaining and $',async({page})=>{
+test.skip('Handel input field without option chaining and $',async({page})=>{
     await page.goto('https://ecommerce-playground.lambdatest.io/index.php?route=account/register')
     await page.getByPlaceholder('First Name').fill('nirmal')
 })
+test.skip('get attribute value',async({page})=>{
+    await page.goto('https://ecommerce-playground.lambdatest.io/index.php?route=account/register')
+    const attributevalue=await page.getByPlaceholder('First Name').getAttribute('placeholder')
+    console.log(attributevalue);
+    
+
+})
+test('handel checkbox by get label', async({page}) => {
+    await page.goto('https://ecommerce-playground.lambdatest.io/index.php?route=account/register')
+    test.slow()
+    await page.getByText('Yes').click()
+});
