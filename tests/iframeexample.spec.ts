@@ -6,7 +6,5 @@ test('Enter value inside inframe', async({page}) => {
         const frame=page.frameLocator('iframe[name="firstFr"]')
     //frame.getByPlaceholder('Enter name').fill('nirmal')
     frame.getByPlaceholder('Enter name').pressSequentially('nirmal')
-   await expect(frame.getByPlaceholder('Enter name')).toHaveValue('nirmal')
-   
-    
+   await expect(frame.getByPlaceholder('Enter name')).toHaveValue('nirmal') 
 });
