@@ -26,7 +26,7 @@ async function login(page, email, password) {
 }
 
 test('Login to lamda test', async({context}) => {
-   await login(page,'webtestingu@gmail.com','lamdatest')
+   await login(page,'Enteryour@gmail.com','Enter your password')
     
 });
 
