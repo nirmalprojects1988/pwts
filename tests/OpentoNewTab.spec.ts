@@ -1,6 +1,5 @@
 //@ts-check
 import{test,expect} from "@playwright/test"
-import { TIMEOUT } from "dns";
 
 test('Open a new tab', async({page}) => {
 await page.goto('https://demoqa.com/browser-windows');
